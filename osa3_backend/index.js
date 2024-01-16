@@ -9,6 +9,7 @@ morgan.token('person', function getPerson (req) {
 
 app.use(cors())
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :person'))
+app.use(express.static('dist'))
 app.use(express.json())
 
 
